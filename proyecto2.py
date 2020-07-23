@@ -33,13 +33,16 @@ icon = pygame.image.load('inicio.jpg') #Icono
 pygame.display.set_icon(icon) #Icono
 
 
+
+
+
+
+
+
+#***********************************************************************************************************************
+
 #Baraja de jugador
-
-
-
-
-
-
+[D,B,]
 
 c_size = (105,305)#Card size
 c_size_juego = (105, 550)
@@ -50,79 +53,120 @@ tacoX = 570
 tacoY = 75
 tacoX_change = 0
 
+#Reverso de carta
+reverse= pygame.image.load("reverso.png")
+reverse= pygame.transform.scale (reverso.png,c_size)
+
 #Comunes:
-#
+#Defuse
 D = pygame.image.load('DEFUSE.png')
 D = pygame.transform.scale(D,c_size_juego)
+D = 75
+D = 75
+D = pygame.image.load("reverso.png")
+D = pygame.transform.scale (reverso.png,c_size)
 #Bomb
 B = pygame.image.load('BOMB.png')
 B = pygame.transform.scale(B,c_size_juego)
-
-def Bomb(x,y,h,w,BOMB):
-    BOMB = 'Bomb'
-    BOMB = Bomb
-    c_pos1 = (x,y)  
-    c_pos2 = (h,w)
-    if Bomb in hand:
-        return pygame.display("you loose")
-
+B = 75
+B = 0
+B = pygame.image.load("reverso.png")
+B = pygame.transform.scale (reverso.png,c_size) 
+#Attack
 A=pygame.image.load('ATTACK.png')
 A = pygame.transform.scale(A,c_size_juego)
+A = 75
+A = 0
+A = pygame.image.load("reverso.png")
+A = pygame.transform.scale (reverso.png,c_size)
 #Shuffle
 Sh = pygame.image.load('SHUFFLE.png')
 Sh = pygame.transform.scale(Sh,c_size_juego)
+Sh = 75
+Sh = 0
+SH = pygame.image.load("reverso.png")
+Sh = pygame.transform.scale (reverso.png,c_size)
 #Skip
 Sk = pygame.image.load('SKIP.png')
 Sk = pygame.transform.scale(Sk,c_size_juego)
+Sk = 75
+Sk = 0
+Sk = pygame.image.load("reverso.png")
+Sk = pygame.transform.scale (reverso.png,c_size)
 #See the future
 Sf = pygame.image.load('SEETHEFUTURE.png')
 Sf = pygame.transform.scale(Sf,c_size_juego)
+Sf = 75
+Sf = 0
+Sf = pygame.image.load("reverso.png")
+Sf = pygame.transform.scale (reverso.png,c_size)
 #Especiales:
 #Favor
 F = pygame.image.load('FAVOR.png')
 F = pygame.transform.scale(F,c_size_juego)
+F = 75
+F = 0
+F = pygame.image.load("reverso.png")
+F = pygame.transform.scale (reverso.png,c_size)
 #Nope
 N = pygame.image.load('NOPE.png')
 N = pygame.transform.scale(N,c_size_juego)
+N = 75
+N = 0
+N = pygame.image.load("reverso.png")
+N = pygame.transform.scale (reverso.png,c_size)
 #Comodin1
 C1 = pygame.image.load('COMODIN1.png')
 C1 = pygame.transform.scale(C1,c_size_juego)
+C1 = 75
+C1 = 0
+C1 = pygame.image.load("reverso.png")
+C1 = pygame.transform.scale (reverso.png,c_size)
 #Comodin2
 C2 = pygame.image.load('COMODIN2.png')
 C2 = pygame.transform.scale(C2,c_size_juego)
+C1 = 75
+C1 = 0
+C1 = pygame.image.load("reverso.png")
+C1 = pygame.transform.scale (reverso.png,c_size)
+
 #Comodin3
 C3 = pygame.image.load('COMODIN3.png')
 C3 = pygame.transform.scale(C3,c_size_juego)
+C3 = 75
+C3 = 0
+C3 = pygame.image.load("reverso.png")
+C3 = pygame.transform.scale (reverso.png,c_size)
+
 #Comodin4
 C4 = pygame.image.load('COMODIN4.png')
 C4 = pygame.transform.scale(C4,c_size_juego)
+C4 = 75
+C4 = 0
+C4 = pygame.image.load("reverso.png")
+C4 = pygame.transform.scale (reverso.png,c_size)
+
 #Comodin5
 C5 = pygame.image.load('COMODIN5.png')
 C5 = pygame.transform.scale(C5,c_size_juego)
+C5 = 75
+C5 = 0
+C5 = pygame.image.load("reverso.png")
+C5 = pygame.transform.scale (reverso.png,c_size)
 
+
+
+#Funciones de cartas
+class cartas():
+    self
+
+
+
+#Funcion de ejemplo
 def taco(x,y):
     screen.blit(tacoImg,(x,y))
-    
-##def acciones(A,x,y,w,h,action=None):
-##    click = pygame.mouse.get_pressed()
-##    print (click())
-##    if click() == (1) and action != None:
-##        if action == "At":
-##            Atttack()
-##        elif action == "Def":
-##            Defuse()
-##        elif action == "Shuf":
-##            Shuffle()
-##        elif action == "Ski":
-##            skip()
-##        elif action == "StF":
-##            Seethefuture()
-##        elif action == "Fav":
-##            Favor()
-##        elif action == "Nop":
-##            Nope()
-##        elif action== "bomb":
-##            Bomb()
+
+
             
                 
             
@@ -141,9 +185,8 @@ while run:
         if event.type == pygame.QUIT: # Cierre del programa
             #sys.exit()
             run=False #Cambia valor de la variable
-            
+    enemigos(c_size)        
     taco(tacoX,tacoY)
     pygame.display.update() # Regula la acutalización de la ventana
 pygame.quit()
-sys.exit()
 quit()
