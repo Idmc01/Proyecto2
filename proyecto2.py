@@ -57,8 +57,9 @@ D = pygame.transform.scale(D,c_size_juego)
 #Bomb
 B = pygame.image.load('BOMB.png')
 B = pygame.transform.scale(B,c_size_juego)
-#Attack
-A = pygame.image.load('ATTACK.png')
+def Bomb(x,y,h,w,"At")
+
+A=pygame.image.load('ATTACK.png')
 A = pygame.transform.scale(A,c_size_juego)
 #Shuffle
 Sh = pygame.image.load('SHUFFLE.png')
@@ -94,6 +95,31 @@ C5 = pygame.transform.scale(C5,c_size_juego)
 
 def taco(x,y):
     screen.blit(tacoImg,(x,y))
+def acciones(A,x,y,w,h,action=None):
+    click = pygame.mouse.get_pressed()
+    print click()
+        if click[] ==[1] and action !=None:
+            if action == "At":
+                Atttack()
+            elif action == "Def":
+                Defuse()
+            elif action == "Shuf":
+                Shuffle()
+            elif action == "Ski":
+                skip()
+            elif action == "StF":
+                Seethefuture()
+            elif action == "Fav":
+                Favor()
+            elif action == "Nop":
+                Nope()
+            elif action== "bomb":
+                Bomb()
+            
+                
+            
+            
+        
 
 
 
