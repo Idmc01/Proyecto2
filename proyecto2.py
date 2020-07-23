@@ -57,9 +57,9 @@ D = pygame.transform.scale(D,c_size_juego)
 #Bomb
 B = pygame.image.load('BOMB.png')
 B = pygame.transform.scale(B,c_size_juego)
-def Bomb((x,y),(h,w),"bomb"):
-    (x,y) = posicion_cartas
-    (h,w) = posicion_cartas
+def Bomb(x,y,h,w,'bomb'):
+    x,y = posicion_cartas
+    h,w = posicion_cartas
     if Bomb in hand:
         return pygame.display("you loose")
 
@@ -99,6 +99,7 @@ C5 = pygame.transform.scale(C5,c_size_juego)
 
 def taco(x,y):
     screen.blit(tacoImg,(x,y))
+    
 def acciones(A,x,y,w,h,action=None):
     click = pygame.mouse.get_pressed()
     print click()
