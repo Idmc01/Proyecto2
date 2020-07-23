@@ -42,7 +42,6 @@ pygame.display.set_icon(icon) #Icono
 #***********************************************************************************************************************
 
 #Baraja de jugador
-[D,B,]
 
 c_size = (105,305)#Card size
 c_size_juego = (105, 550)
@@ -61,104 +60,102 @@ reverse= pygame.transform.scale (reverso.png,c_size)
 #Defuse
 D = pygame.image.load('DEFUSE.png')
 D = pygame.transform.scale(D,c_size_juego)
-D = 75
-D = 75
-D = pygame.image.load("reverso.png")
-D = pygame.transform.scale (reverso.png,c_size)
+Dx = 75
+Dy = 0
+DMx = 0
+DMy = 0
+
 #Bomb
 B = pygame.image.load('BOMB.png')
 B = pygame.transform.scale(B,c_size_juego)
-B = 75
-B = 0
-B = pygame.image.load("reverso.png")
-B = pygame.transform.scale (reverso.png,c_size) 
+Bx = 75
+By= 0
+BMx = 0
+BMy = 0
+
 #Attack
 A=pygame.image.load('ATTACK.png')
 A = pygame.transform.scale(A,c_size_juego)
-A = 75
-A = 0
-A = pygame.image.load("reverso.png")
-A = pygame.transform.scale (reverso.png,c_size)
+Ax = 75
+Ay = 0
+AMx = 0
+AMy = 0
+
 #Shuffle
 Sh = pygame.image.load('SHUFFLE.png')
 Sh = pygame.transform.scale(Sh,c_size_juego)
-Sh = 75
-Sh = 0
-SH = pygame.image.load("reverso.png")
-Sh = pygame.transform.scale (reverso.png,c_size)
+Shy = 75
+Shx = 0 
+ShMx = 0
+ShMy = 0
+
 #Skip
 Sk = pygame.image.load('SKIP.png')
 Sk = pygame.transform.scale(Sk,c_size_juego)
-Sk = 75
-Sk = 0
-Sk = pygame.image.load("reverso.png")
-Sk = pygame.transform.scale (reverso.png,c_size)
+Skx = 75
+Sky = 0
+SkMx = 0
+SkMy = 0
+
 #See the future
 Sf = pygame.image.load('SEETHEFUTURE.png')
 Sf = pygame.transform.scale(Sf,c_size_juego)
-Sf = 75
-Sf = 0
-Sf = pygame.image.load("reverso.png")
-Sf = pygame.transform.scale (reverso.png,c_size)
+Sfx = 75
+Sfy = 0
+SfMx = 0
+SfMx = 0
 #Especiales:
 #Favor
 F = pygame.image.load('FAVOR.png')
 F = pygame.transform.scale(F,c_size_juego)
-F = 75
-F = 0
-F = pygame.image.load("reverso.png")
-F = pygame.transform.scale (reverso.png,c_size)
+Fx = 60
+Fy = 0
+FMx = 0
+FMy = 0
 #Nope
 N = pygame.image.load('NOPE.png')
 N = pygame.transform.scale(N,c_size_juego)
-N = 75
-N = 0
-N = pygame.image.load("reverso.png")
-N = pygame.transform.scale (reverso.png,c_size)
+Nx = 60
+Ny = 0
+NMx = 0
+NMy = 0
 #Comodin1
 C1 = pygame.image.load('COMODIN1.png')
 C1 = pygame.transform.scale(C1,c_size_juego)
-C1 = 75
-C1 = 0
-C1 = pygame.image.load("reverso.png")
-C1 = pygame.transform.scale (reverso.png,c_size)
+C1x = 60
+C1y = 0
+C1Mx = 0
+C1My = 0
 #Comodin2
 C2 = pygame.image.load('COMODIN2.png')
 C2 = pygame.transform.scale(C2,c_size_juego)
-C1 = 75
-C1 = 0
-C1 = pygame.image.load("reverso.png")
-C1 = pygame.transform.scale (reverso.png,c_size)
-
+C2x = 60
+C2y = 0
+C2Mx = 0
+C2My = 0
 #Comodin3
 C3 = pygame.image.load('COMODIN3.png')
 C3 = pygame.transform.scale(C3,c_size_juego)
-C3 = 75
-C3 = 0
-C3 = pygame.image.load("reverso.png")
-C3 = pygame.transform.scale (reverso.png,c_size)
-
+C3X = 60
+C3y = 0
+C3Mx = 0
+C3My = 0
 #Comodin4
 C4 = pygame.image.load('COMODIN4.png')
 C4 = pygame.transform.scale(C4,c_size_juego)
-C4 = 75
-C4 = 0
-C4 = pygame.image.load("reverso.png")
-C4 = pygame.transform.scale (reverso.png,c_size)
-
+C
 #Comodin5
 C5 = pygame.image.load('COMODIN5.png')
 C5 = pygame.transform.scale(C5,c_size_juego)
-C5 = 75
-C5 = 0
-C5 = pygame.image.load("reverso.png")
-C5 = pygame.transform.scale (reverso.png,c_size)
 
 
+#Lista baraja central
+Box = [D,B,A,] 
 
-#Funciones de cartas
-class cartas():
-    self
+#Funcion de cartas en la baraja central - Animacion
+class Bcentral():
+    
+
 
 
 
