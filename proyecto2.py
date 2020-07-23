@@ -57,9 +57,12 @@ D = pygame.transform.scale(D,c_size_juego)
 #Bomb
 B = pygame.image.load('BOMB.png')
 B = pygame.transform.scale(B,c_size_juego)
-def Bomb((x,y),(h,w),"bomb"):
-    (x,y) = posicion_cartas
-    (h,w) = posicion_cartas
+
+def Bomb(x,y,h,w,BOMB):
+    BOMB = 'Bomb'
+    BOMB = Bomb
+    c_pos1 = (x,y)  
+    c_pos2 = (h,w)
     if Bomb in hand:
         return pygame.display("you loose")
 
@@ -99,26 +102,27 @@ C5 = pygame.transform.scale(C5,c_size_juego)
 
 def taco(x,y):
     screen.blit(tacoImg,(x,y))
-def acciones(A,x,y,w,h,action=None):
-    click = pygame.mouse.get_pressed()
-    print click()
-        if click[] ==[1] and action !=None:
-            if action == "At":
-                Atttack()
-            elif action == "Def":
-                Defuse()
-            elif action == "Shuf":
-                Shuffle()
-            elif action == "Ski":
-                skip()
-            elif action == "StF":
-                Seethefuture()
-            elif action == "Fav":
-                Favor()
-            elif action == "Nop":
-                Nope()
-            elif action== "bomb":
-                Bomb()
+    
+##def acciones(A,x,y,w,h,action=None):
+##    click = pygame.mouse.get_pressed()
+##    print (click())
+##    if click() == (1) and action != None:
+##        if action == "At":
+##            Atttack()
+##        elif action == "Def":
+##            Defuse()
+##        elif action == "Shuf":
+##            Shuffle()
+##        elif action == "Ski":
+##            skip()
+##        elif action == "StF":
+##            Seethefuture()
+##        elif action == "Fav":
+##            Favor()
+##        elif action == "Nop":
+##            Nope()
+##        elif action== "bomb":
+##            Bomb()
             
                 
             
@@ -141,4 +145,5 @@ while run:
     taco(tacoX,tacoY)
     pygame.display.update() # Regula la acutalización de la ventana
 pygame.quit()
+sys.exit()
 quit()
