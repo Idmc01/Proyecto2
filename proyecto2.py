@@ -49,38 +49,77 @@ tacoImg = pygame.transform.scale(tacoImg,c_size)
 tacoX = 570
 tacoY = 75
 tacoX_change = 0
+Reverso= pygame.image.load("reverso.png")
+Reverso= pygame.transform.scale (reverso.png,c_size)
 
 #Comunes:
 #
 D = pygame.image.load('DEFUSE.png')
 D = pygame.transform.scale(D,c_size_juego)
+D2 = pygame.image.load('DEFUSE.png')
+D2 = pygame.transform.scale(D,c_size_juego)
+D3 = pygame.image.load('DEFUSE.png')
+D3 = pygame.transform.scale(D,c_size_juego)
+D4 = pygame.image.load('DEFUSE.png')
+D4 = pygame.transform.scale(D,c_size_juego)
+D5 = pygame.image.load('DEFUSE.png')
+D5 = pygame.transform.scale(D,c_size_juego)
+D6 = pygame.image.load('DEFUSE.png')
+D6 = pygame.transform.scale(D,c_size_juego)
 #Bomb
 B = pygame.image.load('BOMB.png')
 B = pygame.transform.scale(B,c_size_juego)
-def Bomb(x,y,h,w,'bomb'):
-    x,y = posicion_cartas
-    h,w = posicion_cartas
-    if Bomb in hand:
-        return pygame.display("you loose")
-
-A=pygame.image.load('ATTACK.png')
-A = pygame.transform.scale(A,c_size_juego)
+B2 = pygame.image.load('BOMB.png')
+B2 = pygame.transform.scale(B,c_size_juego)
+B3 = pygame.image.load('BOMB.png')
+B3 = pygame.transform.scale(B,c_size_juego)
+B4 = pygame.image.load('BOMB.png')
+B4 = pygame.transform.scale(B,c_size_juego)
+#me quede aqui, voy a definir donde se coolocan las cartas enemigas
+#def Bomb((x,y),(h,w),"bomb"):
+#    (x,y) = posicion_cartas
+#    (h,w) = posicion_cartas
+#    if Bomb in hand:
+#        return pygame.display("you loose")
+#****las cartas marcadas son para despues
+##A=pygame.image.load('ATTACK.png')
+##A = pygame.transform.scale(A,c_size_juego)
 #Shuffle
 Sh = pygame.image.load('SHUFFLE.png')
 Sh = pygame.transform.scale(Sh,c_size_juego)
+Sh2 = pygame.image.load('SHUFFLE.png')
+Sh2 = pygame.transform.scale(Sh,c_size_juego)
+Sh3 = pygame.image.load('SHUFFLE.png')
+Sh3 = pygame.transform.scale(Sh,c_size_juego)
+Sh4 = pygame.image.load('SHUFFLE.png')
+Sh4 = pygame.transform.scale(Sh,c_size_juego)
 #Skip
-Sk = pygame.image.load('SKIP.png')
-Sk = pygame.transform.scale(Sk,c_size_juego)
+#Sk = pygame.image.load('SKIP.png')
+#Sk = pygame.transform.scale(Sk,c_size_juego)
 #See the future
 Sf = pygame.image.load('SEETHEFUTURE.png')
 Sf = pygame.transform.scale(Sf,c_size_juego)
+Sf2 = pygame.image.load('SEETHEFUTURE.png')
+Sf2 = pygame.transform.scale(Sf,c_size_juego)
+Sf3 = pygame.image.load('SEETHEFUTURE.png')
+Sf3 = pygame.transform.scale(Sf,c_size_juego)
+Sf4 = pygame.image.load('SEETHEFUTURE.png')
+Sf4 = pygame.transform.scale(Sf,c_size_juego)
+Sf5 = pygame.image.load('SEETHEFUTURE.png')
+Sf5 = pygame.transform.scale(Sf,c_size_juego)
 #Especiales:
 #Favor
 F = pygame.image.load('FAVOR.png')
 F = pygame.transform.scale(F,c_size_juego)
+F2 = pygame.image.load('FAVOR.png')
+F2 = pygame.transform.scale(F,c_size_juego)
+F3 = pygame.image.load('FAVOR.png')
+F3 = pygame.transform.scale(F,c_size_juego)
+F4 = pygame.image.load('FAVOR.png')
+F4 = pygame.transform.scale(F,c_size_juego)
 #Nope
-N = pygame.image.load('NOPE.png')
-N = pygame.transform.scale(N,c_size_juego)
+##N = pygame.image.load('NOPE.png')
+##N = pygame.transform.scale(N,c_size_juego)
 #Comodin1
 C1 = pygame.image.load('COMODIN1.png')
 C1 = pygame.transform.scale(C1,c_size_juego)
@@ -88,38 +127,42 @@ C1 = pygame.transform.scale(C1,c_size_juego)
 C2 = pygame.image.load('COMODIN2.png')
 C2 = pygame.transform.scale(C2,c_size_juego)
 #Comodin3
-C3 = pygame.image.load('COMODIN3.png')
-C3 = pygame.transform.scale(C3,c_size_juego)
+##C3 = pygame.image.load('COMODIN3.png')
+##C3 = pygame.transform.scale(C3,c_size_juego)
 #Comodin4
-C4 = pygame.image.load('COMODIN4.png')
-C4 = pygame.transform.scale(C4,c_size_juego)
+##C4 = pygame.image.load('COMODIN4.png')
+##C4 = pygame.transform.scale(C4,c_size_juego)
 #Comodin5
-C5 = pygame.image.load('COMODIN5.png')
-C5 = pygame.transform.scale(C5,c_size_juego)
+##C5 = pygame.image.load('COMODIN5.png')
+##C5 = pygame.transform.scale(C5,c_size_juego)
 
 def taco(x,y):
     screen.blit(tacoImg,(x,y))
-    
-def acciones(A,x,y,w,h,action=None):
-    click = pygame.mouse.get_pressed()
-    print click()
-        if click[] ==[1] and action !=None:
-            if action == "At":
-                Atttack()
-            elif action == "Def":
-                Defuse()
-            elif action == "Shuf":
-                Shuffle()
-            elif action == "Ski":
-                skip()
-            elif action == "StF":
-                Seethefuture()
-            elif action == "Fav":
-                Favor()
-            elif action == "Nop":
-                Nope()
-            elif action== "bomb":
-                Bomb()
+def enemigos(x,y):
+    screen.blit(reverso,(x,y))
+
+
+
+#def acciones(A,x,y,w,h,action=None):
+#    click = pygame.mouse.get_pressed()
+#    print click()
+#        if click[] ==[1] and action !=None:
+#            if action == "At":
+#                Atttack()
+#            elif action == "Def":
+#                Defuse()
+#            elif action == "Shuf":
+#                Shuffle()
+#            elif action == "Ski":
+#               skip()
+#            elif action == "StF":
+#                Seethefuture()
+#            elif action == "Fav":
+#                Favor()
+#            elif action == "Nop":
+#                Nope()
+#            elif action== "bomb":
+#                Bomb()
             
                 
             
@@ -138,7 +181,7 @@ while run:
         if event.type == pygame.QUIT: # Cierre del programa
             #sys.exit()
             run=False #Cambia valor de la variable
-            
+    enemigos(c_size)        
     taco(tacoX,tacoY)
     pygame.display.update() # Regula la acutalización de la ventana
 pygame.quit()
