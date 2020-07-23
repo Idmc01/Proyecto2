@@ -57,7 +57,11 @@ D = pygame.transform.scale(D,c_size_juego)
 #Bomb
 B = pygame.image.load('BOMB.png')
 B = pygame.transform.scale(B,c_size_juego)
-def Bomb(x,y,h,w,"At")
+def Bomb((x,y),(h,w),"bomb"):
+    (x,y) = posicion_cartas
+    (h,w) = posicion_cartas
+    if Bomb in hand:
+        return pygame.display("you loose")
 
 A=pygame.image.load('ATTACK.png')
 A = pygame.transform.scale(A,c_size_juego)
