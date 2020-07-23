@@ -53,88 +53,95 @@ Reverso= pygame.image.load("reverso.png")
 Reverso= pygame.transform.scale (reverso.png,c_size)
 
 #Comunes:
-#
+#defuse
 D = pygame.image.load('DEFUSE.png')
 D = pygame.transform.scale(D,c_size_juego)
-D2 = pygame.image.load('DEFUSE.png')
-D2 = pygame.transform.scale(D,c_size_juego)
-D3 = pygame.image.load('DEFUSE.png')
-D3 = pygame.transform.scale(D,c_size_juego)
-D4 = pygame.image.load('DEFUSE.png')
-D4 = pygame.transform.scale(D,c_size_juego)
-D5 = pygame.image.load('DEFUSE.png')
-D5 = pygame.transform.scale(D,c_size_juego)
-D6 = pygame.image.load('DEFUSE.png')
-D6 = pygame.transform.scale(D,c_size_juego)
-#Bomb
+Dx = 75
+Dy = 0
+DMx = 0
+DMy = 0
+#bomb
 B = pygame.image.load('BOMB.png')
 B = pygame.transform.scale(B,c_size_juego)
-B2 = pygame.image.load('BOMB.png')
-B2 = pygame.transform.scale(B,c_size_juego)
-B3 = pygame.image.load('BOMB.png')
-B3 = pygame.transform.scale(B,c_size_juego)
-B4 = pygame.image.load('BOMB.png')
-B4 = pygame.transform.scale(B,c_size_juego)
-#me quede aqui, voy a definir donde se coolocan las cartas enemigas
-#def Bomb((x,y),(h,w),"bomb"):
-#    (x,y) = posicion_cartas
-#    (h,w) = posicion_cartas
-#    if Bomb in hand:
-#        return pygame.display("you loose")
-#****las cartas marcadas son para despues
-##A=pygame.image.load('ATTACK.png')
-##A = pygame.transform.scale(A,c_size_juego)
+B = 75
+B = 0
+BMx = 0
+BMy = 0
+
+#attack
+A=pygame.image.load('ATTACK.png')
+A = pygame.transform.scale(A,c_size_juego)
+B = 75
+B = 0
+AMx = 0
+AMy = 0
 #Shuffle
 Sh = pygame.image.load('SHUFFLE.png')
 Sh = pygame.transform.scale(Sh,c_size_juego)
-Sh2 = pygame.image.load('SHUFFLE.png')
-Sh2 = pygame.transform.scale(Sh,c_size_juego)
-Sh3 = pygame.image.load('SHUFFLE.png')
-Sh3 = pygame.transform.scale(Sh,c_size_juego)
-Sh4 = pygame.image.load('SHUFFLE.png')
-Sh4 = pygame.transform.scale(Sh,c_size_juego)
+Sh = 75
+Sh = 0 
+ShMx = 0
+ShMy = 0
 #Skip
 #Sk = pygame.image.load('SKIP.png')
 #Sk = pygame.transform.scale(Sk,c_size_juego)
 #See the future
 Sf = pygame.image.load('SEETHEFUTURE.png')
-Sf = pygame.transform.scale(Sf,c_size_juego)
-Sf2 = pygame.image.load('SEETHEFUTURE.png')
-Sf2 = pygame.transform.scale(Sf,c_size_juego)
-Sf3 = pygame.image.load('SEETHEFUTURE.png')
-Sf3 = pygame.transform.scale(Sf,c_size_juego)
-Sf4 = pygame.image.load('SEETHEFUTURE.png')
-Sf4 = pygame.transform.scale(Sf,c_size_juego)
-Sf5 = pygame.image.load('SEETHEFUTURE.png')
-Sf5 = pygame.transform.scale(Sf,c_size_juego)
+Sf = pygame. transform.scale(sf,c_sice_juego)
+Sf = 75
+Sf = 0
+SfMx = 0
+SfMy = 0
 #Especiales:
 #Favor
 F = pygame.image.load('FAVOR.png')
 F = pygame.transform.scale(F,c_size_juego)
-F2 = pygame.image.load('FAVOR.png')
-F2 = pygame.transform.scale(F,c_size_juego)
-F3 = pygame.image.load('FAVOR.png')
-F3 = pygame.transform.scale(F,c_size_juego)
-F4 = pygame.image.load('FAVOR.png')
-F4 = pygame.transform.scale(F,c_size_juego)
+F = 75
+F = 0
+FMx = 0
+fMy = 0
 #Nope
-##N = pygame.image.load('NOPE.png')
-##N = pygame.transform.scale(N,c_size_juego)
+N = pygame.image.load('NOPE.png')
+N = pygame.transform.scale(N,c_size_juego)
+N = 75
+N = 0
+NMx = 0
+NMy = 0
 #Comodin1
 C1 = pygame.image.load('COMODIN1.png')
 C1 = pygame.transform.scale(C1,c_size_juego)
+C1 =75
+C1 = 0
+C1Mx = 0
+C1My = 0
 #Comodin2
 C2 = pygame.image.load('COMODIN2.png')
-C2 = pygame.transform.scale(C2,c_size_juego)
+C2 = pygame.transform.scale(C1,c_size_juego)
+C2 =75
+C2 = 0
+C2Mx = 0
+C2My = 0
 #Comodin3
-##C3 = pygame.image.load('COMODIN3.png')
-##C3 = pygame.transform.scale(C3,c_size_juego)
+C3 = pygame.image.load('COMODIN3.png')
+C3 = pygame.transform.scale(C1,c_size_juego)
+C3 =75
+C3 = 0
+C3Mx = 0
+C3My = 0
 #Comodin4
-##C4 = pygame.image.load('COMODIN4.png')
-##C4 = pygame.transform.scale(C4,c_size_juego)
+C4 = pygame.image.load('COMODIN4.png')
+C4 = pygame.transform.scale(C1,c_size_juego)
+C4 =75
+C4 = 0
+C4Mx = 0
+C4My = 0
 #Comodin5
-##C5 = pygame.image.load('COMODIN5.png')
-##C5 = pygame.transform.scale(C5,c_size_juego)
+C5 = pygame.image.load('COMODIN5.png')
+C5 = pygame.transform.scale(C1,c_size_juego)
+C5 =75
+C5 = 0
+C5Mx = 0
+C5My = 0
 
 def taco(x,y):
     screen.blit(tacoImg,(x,y))
