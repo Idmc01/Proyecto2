@@ -4,12 +4,13 @@ import sys
 import random
 import ctypes
 
+
+
 #Bibliografía:
 def bibliografia(text):
-    Bib=['[https://stackoverflow.com/questions/11603222/allowing-resizing-window-pygame],[https://github.com/search?q=pygame.display.toggle_fullscreen&type=Code&l=Python],[https://www.pygame.org/wiki/tutorials/],[https://www.tutorialspoint.com/python3/python_modules.htm],[http://index-of.es/Python/Beginning.Game.Development.with.Python.and.Pygame.From.Novice.to.Professional.Will.McGugan.2007.pdf],[https://buildmedia.readthedocs.org/media/pdf/pygame/latest/pygame.pdf],[https://www.bitdegree.org/learn/python-class#:~:text=In%20short%2C%20a%20Python%20class,attributes%20the%20object%20can%20have.],[https://github.com/R0X0RE0/Dragon/blob/d7b92eee9165b65d56692fe7db5e631826785b27/Python%20Files/Dragon%20Full%20Demo/TEST_GAMES/demos/base/basescripts/engscripts/pygamebase.py],[https://stackoverflow.com/questions/39274460/pygame-fullscreen-display-flag-creates-a-game-screen-that-is-too-large-for-the-s/39298107#39298107]']
+    Bib=['[https://www.youtube.com/watch?v=h5hW3ynHvhM],[https://github.com/Aaron-Buckles/solitaire],[https://stackoverflow.com/questions/14895599/insert-an-element-at-specific-index-in-a-list-and-return-updated-list],[https://www.geeksforgeeks.org/python-truncate-a-list/],[https://stackoverflow.com/questions/2189800/length-of-an-integer-in-python],[https://stackoverflow.com/questions/11603222/allowing-resizing-window-pygame],[https://github.com/search?q=pygame.display.toggle_fullscreen&type=Code&l=Python],[https://www.pygame.org/wiki/tutorials/],[https://www.tutorialspoint.com/python3/python_modules.htm],[http://index-of.es/Python/Beginning.Game.Development.with.Python.and.Pygame.From.Novice.to.Professional.Will.McGugan.2007.pdf],[https://buildmedia.readthedocs.org/media/pdf/pygame/latest/pygame.pdf],[https://www.bitdegree.org/learn/python-class#:~:text=In%20short%2C%20a%20Python%20class,attributes%20the%20object%20can%20have.],[https://github.com/R0X0RE0/Dragon/blob/d7b92eee9165b65d56692fe7db5e631826785b27/Python%20Files/Dragon%20Full%20Demo/TEST_GAMES/demos/base/basescripts/engscripts/pygamebase.py],[https://stackoverflow.com/questions/39274460/pygame-fullscreen-display-flag-creates-a-game-screen-that-is-too-large-for-the-s/39298107#39298107]']
 
-
-
+    
 #Inicio de diseño de la interfaz:
 pygame.init() #Inicializar pygame
 
@@ -143,11 +144,17 @@ C3My = 0
 #Comodin4
 C4 = pygame.image.load('COMODIN4.png')
 C4 = pygame.transform.scale(C4,c_size_juego)
-C
+C4x = 55
+C4y = 0
+C4Mx = 0
+C4My = 0
 #Comodin5
 C5 = pygame.image.load('COMODIN5.png')
 C5 = pygame.transform.scale(C5,c_size_juego)
-
+C5x = 50
+C5y = 0
+C5Mx = 0
+C5My = 0
 
 #Lista baraja central
 Box = [D,B,A,] 
@@ -164,6 +171,15 @@ def taco(x,y):
     screen.blit(tacoImg,(x,y))
 
 
+
+#Funcion para insertar elementos, permite al jugador agregar la carta a la baraja central donde desee
+def inserter(L,i,e): # L = List, i = Index, e = Element
+    if L == []:
+       return "Empty list"
+    else:
+        L0 = L[:] 
+        L0[i-1:i-1] = [e]
+        return L0
             
                 
             

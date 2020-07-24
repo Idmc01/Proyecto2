@@ -153,8 +153,20 @@ C5 = pygame.transform.scale(C5,c_size_juego)
 Box = [D,B,A,] 
 
 #Funcion de cartas en la baraja central - Animacion
-class Bcentral():
+##class Bcentral():
     
+#Funcion para controlar listas
+def inserter(L,i,e): # L = List, i = Index, e = Element
+    if L == []:
+       return "Empty list"
+
+    elif isinstance(e,int)==True:
+        L0 = L[:] 
+        L0[i-1:i-1] = [e]
+        return L0
+    else:
+        L.extend(e)
+        return L
 
 
 
