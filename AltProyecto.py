@@ -4,20 +4,11 @@ import sys
 import random
 import ctypes
 
-
-
-#Bibliografía:
-def bibliografia(text):
-    Bib=['[],[https://www.tutorialspoint.com/python3/number_shuffle.htm],[https://www.youtube.com/watch?v=h5hW3ynHvhM],[https://github.com/Aaron-Buckles/solitaire],[https://stackoverflow.com/questions/14895599/insert-an-element-at-specific-index-in-a-list-and-return-updated-list],[https://www.geeksforgeeks.org/python-truncate-a-list/],[https://stackoverflow.com/questions/2189800/length-of-an-integer-in-python],[https://stackoverflow.com/questions/11603222/allowing-resizing-window-pygame],[https://github.com/search?q=pygame.display.toggle_fullscreen&type=Code&l=Python],[https://www.pygame.org/wiki/tutorials/],[https://www.tutorialspoint.com/python3/python_modules.htm],[http://index-of.es/Python/Beginning.Game.Development.with.Python.and.Pygame.From.Novice.to.Professional.Will.McGugan.2007.pdf],[https://buildmedia.readthedocs.org/media/pdf/pygame/latest/pygame.pdf],[https://www.bitdegree.org/learn/python-class#:~:text=In%20short%2C%20a%20Python%20class,attributes%20the%20object%20can%20have.],[https://github.com/R0X0RE0/Dragon/blob/d7b92eee9165b65d56692fe7db5e631826785b27/Python%20Files/Dragon%20Full%20Demo/TEST_GAMES/demos/base/basescripts/engscripts/pygamebase.py],[https://stackoverflow.com/questions/39274460/pygame-fullscreen-display-flag-creates-a-game-screen-that-is-too-large-for-the-s/39298107#39298107]']
-
     
 #Inicio de diseño de la interfaz:
 pygame.init() #Inicializar pygame
 
-#Colores:
-
-
-#Resolucion: #Notar que no funciona en linux, sino unicamentye en Windows
+#Resolucion: #Notar que no funciona en linux, sino unicamente en Windows
 ##ctypes.windll.user32.SetProcessDPIAware() #obtine información de la resolución actualmente utilizada
 ##true_res = (ctypes.windll.user32.GetSystemMetrics(0), ctypes.windll.user32.GetSystemMetrics(1)) #Almacenamiento de páramentros
 ##pygame.display.set_mode(true_res,pygame.FULLSCREEN) #Creación de ventana
@@ -42,10 +33,10 @@ pygame.display.set_icon(icon) #Icono
 
 #***********************************************************************************************************************
 
-#Baraja de jugador
+#Variables para Baraja de jugador
 
-c_size = (105,305)#Card size
-c_size_juego = (105, 550)
+c_size = (190,305)#Card size
+c_size_juego = (85, 100)
 #Tacocat
 tacoImg = pygame.image.load('TrueTacocat.png')
 tacoImg = pygame.transform.scale(tacoImg,c_size)
@@ -53,10 +44,13 @@ tacoX = 570
 tacoY = 75
 tacoX_change = 0
 
-#Reverso de carta
+#Reverso de carta. Utilizado para representar la baraja central
 reverse= pygame.image.load("reverso.png")
-reverse= pygame.transform.scale (reverso.png,c_size)
-
+reverse= pygame.transform.scale(reverse,c_size)
+reversex = 570
+reversey = 75
+reverseMx = 0
+reverseMy = 0
 #Comunes:
 #Defuse
 D = pygame.image.load('DEFUSE.png')
@@ -156,19 +150,17 @@ C5y = 0
 C5Mx = 0
 C5My = 0
 
-#Lista baraja central
-Box = [D,B,A,] 
 
 #Funcion de cartas en la baraja central - Animacion
-class Bcentral():
-    
+##class Bcentral():
+
 
 
 
 
 #Funcion de ejemplo
-def taco(x,y):
-    screen.blit(tacoImg,(x,y))
+def reverse_pos(x,y): #posicion de imagen
+    screen.blit(reverse,(x,y))
 
 
 
@@ -182,24 +174,38 @@ def inserter(L,i,e): # L = List, i = Index, e = Element
         L0[i-1:i-1] = [e]
         return L0
     elif isinstance(e,str)==True:
-         L0 == L[:]
-         L0 == L[i-1:i-1] = [e]
+        L.insert(i,e)
+        return L
     else:
         L.extend(e)
         return L
 
-# -------- Ejecucion de del juego ----------- #
-run=True #Variable para regular la ejecución
 
-while run:
-    screen.fill((0,0,0)) 
-    screen.blit(bg,(0,0))
+
+# -------- Ejecucion del juego ----------- #
+#********************************************************************************************************************
+run=True #Variable para regular la ejecución
+while run==True:
+
+
+    screen.blit(bg,(0,0)) #Establece imagen como fondo de pantalla
+    #event = pygame.event.wait() # Obtiene eventos en la ventana
+
     for event in pygame.event.get(): #Obtener eventos (acciones realizadas por el usuario)
+        # Identifica si cualquier boton fue presionado
+        if event.type == pygame.MOUSEBUTTONDOWN:
+            print ('Presionado en momento {} y posicion {}'.format(event.button, event.pos))
+
+        # Determina si un boton a sido presionado y luego soltado
+        if event.type == pygame.MOUSEBUTTONUP:
+            print ('Soltado en momento {} y posición {}'.format(event.button, event.pos))
+
+        # Detecta cuando se presiona la 'x' para cerrar al ventana
         if event.type == pygame.QUIT: # Cierre del programa
-            #sys.exit()
-            run=False #Cambia valor de la variable
-    enemigos(c_size)        
-    taco(tacoX,tacoY)
+            run=False
+    
+    reverse_pos(reversex,reversey) #Utiliza valores prestablecido de la variable
     pygame.display.update() # Regula la acutalización de la ventana
+
 pygame.quit()
 quit()
