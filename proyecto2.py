@@ -33,15 +33,13 @@ icon = pygame.image.load('inicio.jpg') #Icono
 pygame.display.set_icon(icon) #Icono
 
 
-
-
-
-
-
-
-#***********************************************************************************************************************
-
 #Baraja de jugador
+
+
+
+
+
+
 
 c_size = (105,305)#Card size
 c_size_juego = (105, 550)
@@ -51,131 +49,126 @@ tacoImg = pygame.transform.scale(tacoImg,c_size)
 tacoX = 570
 tacoY = 75
 tacoX_change = 0
-
-#Reverso de carta
-reverse= pygame.image.load("reverso.png")
-reverse= pygame.transform.scale (reverso.png,c_size)
+Reverso= pygame.image.load("reverso.png")
+Reverso= pygame.transform.scale (reverso.png,c_size)
 
 #Comunes:
-#Defuse
+#defuse
 D = pygame.image.load('DEFUSE.png')
 D = pygame.transform.scale(D,c_size_juego)
 Dx = 75
 Dy = 0
 DMx = 0
 DMy = 0
-
-#Bomb
+#bomb
 B = pygame.image.load('BOMB.png')
 B = pygame.transform.scale(B,c_size_juego)
-Bx = 75
-By= 0
+B = 75
+B = 0
 BMx = 0
 BMy = 0
 
-#Attack
+#attack
 A=pygame.image.load('ATTACK.png')
 A = pygame.transform.scale(A,c_size_juego)
-Ax = 75
-Ay = 0
+B = 75
+B = 0
 AMx = 0
 AMy = 0
-
 #Shuffle
 Sh = pygame.image.load('SHUFFLE.png')
 Sh = pygame.transform.scale(Sh,c_size_juego)
-Shy = 75
-Shx = 0 
+Sh = 75
+Sh = 0 
 ShMx = 0
 ShMy = 0
-
 #Skip
-Sk = pygame.image.load('SKIP.png')
-Sk = pygame.transform.scale(Sk,c_size_juego)
-Skx = 75
-Sky = 0
-SkMx = 0
-SkMy = 0
-
+#Sk = pygame.image.load('SKIP.png')
+#Sk = pygame.transform.scale(Sk,c_size_juego)
 #See the future
 Sf = pygame.image.load('SEETHEFUTURE.png')
-Sf = pygame.transform.scale(Sf,c_size_juego)
-Sfx = 75
-Sfy = 0
+Sf = pygame. transform.scale(sf,c_sice_juego)
+Sf = 75
+Sf = 0
 SfMx = 0
-SfMx = 0
+SfMy = 0
 #Especiales:
 #Favor
 F = pygame.image.load('FAVOR.png')
 F = pygame.transform.scale(F,c_size_juego)
-Fx = 60
-Fy = 0
+F = 75
+F = 0
 FMx = 0
-FMy = 0
+fMy = 0
 #Nope
 N = pygame.image.load('NOPE.png')
 N = pygame.transform.scale(N,c_size_juego)
-Nx = 60
-Ny = 0
+N = 75
+N = 0
 NMx = 0
 NMy = 0
 #Comodin1
 C1 = pygame.image.load('COMODIN1.png')
 C1 = pygame.transform.scale(C1,c_size_juego)
-C1x = 60
-C1y = 0
+C1 =75
+C1 = 0
 C1Mx = 0
 C1My = 0
 #Comodin2
 C2 = pygame.image.load('COMODIN2.png')
-C2 = pygame.transform.scale(C2,c_size_juego)
-C2x = 60
-C2y = 0
+C2 = pygame.transform.scale(C1,c_size_juego)
+C2 =75
+C2 = 0
 C2Mx = 0
 C2My = 0
 #Comodin3
 C3 = pygame.image.load('COMODIN3.png')
-C3 = pygame.transform.scale(C3,c_size_juego)
-C3X = 60
-C3y = 0
+C3 = pygame.transform.scale(C1,c_size_juego)
+C3 =75
+C3 = 0
 C3Mx = 0
 C3My = 0
 #Comodin4
 C4 = pygame.image.load('COMODIN4.png')
-C4 = pygame.transform.scale(C4,c_size_juego)
-C
+C4 = pygame.transform.scale(C1,c_size_juego)
+C4 =75
+C4 = 0
+C4Mx = 0
+C4My = 0
 #Comodin5
 C5 = pygame.image.load('COMODIN5.png')
-C5 = pygame.transform.scale(C5,c_size_juego)
+C5 = pygame.transform.scale(C1,c_size_juego)
+C5 =75
+C5 = 0
+C5Mx = 0
+C5My = 0
 
-
-#Lista baraja central
-Box = [D,B,A,] 
-
-#Funcion de cartas en la baraja central - Animacion
-##class Bcentral():
-    
-#Funcion para controlar listas
-def inserter(L,i,e): # L = List, i = Index, e = Element
-    if L == []:
-       return "Empty list"
-
-    elif isinstance(e,int)==True:
-        L0 = L[:] 
-        L0[i-1:i-1] = [e]
-        return L0
-    else:
-        L.extend(e)
-        return L
-
-
-
-
-#Funcion de ejemplo
 def taco(x,y):
     screen.blit(tacoImg,(x,y))
 
 
+
+
+#def acciones(A,x,y,w,h,action=None):
+#    click = pygame.mouse.get_pressed()
+#    print click()
+#        if click[] ==[1] and action !=None:
+#            if action == "At":
+#                Atttack()
+#            elif action == "Def":
+#                Defuse()
+#            elif action == "Shuf":
+#                Shuffle()
+#            elif action == "Ski":
+#               skip()
+#            elif action == "StF":
+#                Seethefuture()
+#            elif action == "Fav":
+#                Favor()
+#            elif action == "Nop":
+#                Nope()
+#            elif action== "bomb":
+#                Bomb()
             
                 
             
@@ -193,8 +186,7 @@ while run:
     for event in pygame.event.get(): #Obtener eventos (acciones realizadas por el usuario)
         if event.type == pygame.QUIT: # Cierre del programa
             #sys.exit()
-            run=False #Cambia valor de la variable
-    enemigos(c_size)        
+            run=False #Cambia valor de la variable   
     taco(tacoX,tacoY)
     pygame.display.update() # Regula la acutalización de la ventana
 pygame.quit()
